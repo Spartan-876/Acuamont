@@ -1,0 +1,28 @@
+
+body {
+    background-color:#f2f2f2;
+    font-family: Gabarito, Tahoma, sans-serif;
+}
+
+.imagen-logo{
+    background-color: #060147;
+}
+
+.navbar {
+    backface-visibility: inherit;
+}
+
+.navbar-custom .nav-link{
+    color: #060147;
+}
+
+.navbar-custom .nav-link.active{
+    background-color: #060147;
+    color: white;
+}
+
+.navbar-custom .nav-link:hover{
+    text-decoration: underline;
+}
+
+

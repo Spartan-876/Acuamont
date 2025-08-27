@@ -8,12 +8,9 @@ body {
     background-color: #060147;
 }
 
-.navbar {
-    backface-visibility: inherit;
-}
-
 .navbar-custom .nav-link{
     color: #060147;
+    text-decoration: none;
 }
 
 .navbar-custom .nav-link.active{
@@ -22,7 +19,8 @@ body {
 }
 
 .navbar-custom .nav-link:hover{
-    text-decoration: underline;
+    color: white;
+    background-color: #060147;
 }
 
 .shadow-top{

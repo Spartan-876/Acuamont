@@ -19,7 +19,8 @@ document.getElementById('local-info-1').addEventListener('click', () => {
                 `,
         showCloseButton: true,
         focusConfirm: false,
-        confirmButtonText: '¡Entendido!'
+        confirmButtonText: '¡Entendido!',
+        confirmButtonColor: '#0A254A'
     });
 });
 
@@ -46,6 +47,7 @@ document.getElementById('local-info-2').addEventListener('click', () => {
                 `,
         showCloseButton: true,
         focusConfirm: false,
-        confirmButtonText: '¡Entendido!'
+        confirmButtonText: '¡Entendido!',
+        confirmButtonColor: '#0A254A'
     });
 });

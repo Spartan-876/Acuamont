@@ -8,60 +8,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="Resource/logo1.png" type="image/x-icon">
+    <link rel="icon" href="Resource/iconos/logo1.png" type="image/x-icon">
 
+    <link rel="stylesheet" href="CSS/header-footer.css">
     <link rel="stylesheet" href="CSS/styleIndex.css">
 
     <title>Pagina Principal</title>
 </head>
 <body>
 
-    <div class="container-fluid p-0 ">
+    <div>
         <header>
-            <div class="conteiner-md p-3 d-flex text-white text-center align-items-center justify-content-center imagen-logo">
+            <div class="container-fluid p-3 d-flex text-white text-center align-items-center justify-content-center imagen-logo">
                 <h1 class="me-3 ms-3 mb-0">ACUAMONT</h1>
                 <a href="index.html" >
-                    <img class="rounded-circle img-fluid w-50 h-auto" src="Resource/logo2.jpg" id="logo" alt="Acuamont logo">
+                    <img class="rounded-circle img-fluid w-50 h-auto" src="Resource/iconos/logo2.jpg" id="logo" alt="Acuamont logo">
                 </a>
-            </div>
-            <div class="container-fluid  shadow bg-white navbar-custom " >
-                <ul class="nav nav-pills d-flex justify-content-center py-3 gap-1" >
-                    <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
-                    <li class="nav-item"><a href="Productos.html" class="nav-link">Productos</a></li>
-                    <li class="nav-item"><a href="Nosotros.html" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
-                </ul>
             </div>
         </header>
     </div>
+    <div class="container shadow bg-white sticky-top m-auto mt-3 navbar-custom" >
+        <ul class="nav nav-pills d-flex justify-content-center py-3 gap-1" >
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+            <li class="nav-item"><a href="Servicios.html" class="nav-link">Servicios</a></li>
+            <li class="nav-item"><a href="Productos.html" class="nav-link">Productos</a></li>
+            <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+    </div>
 
-    <div class="container-fluid mt-5 mb-5 my-5 align-content-center">
+    <div class="container-fluid mt-5 mb-5 align-content-center">
 
-        <div class="container-md p-5 bg-white shadow border rounded ">
-            <div class="row">
-                <div class="col-md m-2  card border-0">
-                    <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle m-auto" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                    </svg>
-                    <h2 class="fw-normal card-title">Heading</h2>
-                    <p class="card-text">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <div class="container-md p-5 bg-white shadow border rounded text-center">
+            <h2 class="display-5 fw-bold mb-3">Tu Mundo Acuático, Siempre Vivo</h2>
+            <p class="lead text-secondary mb-4">
+                Descubre la mejor selección de peces, accesorios y servicios especializados para crear acuarios vibrantes y saludables.
+                En Acuamont te ofrecemos productos de calidad, asesoría profesional y todo lo necesario para mantener un ecosistema acuático equilibrado.
+                Tanto si eres un aficionado como un profesional, tenemos soluciones que se adaptan a cada necesidad y espacio.
+            </p>
+            <div class="d-flex justify-content-center flex-column flex-sm-row">
+                <a href="Contacto.html" class="btn btn-primary btn-lg btn-rounded me-sm-2 mb-2 mb-sm-0 btn-custom">Contactanos</a>
+                <a href="Servicios.html" class="btn btn-outline-secondary btn-lg btn-rounded btn-custom-light">Saber Más</a>
+            </div>
+        </div>
+
+        <div class="container-md p-5 my-5 bg-white shadow border rounded ">
+            <div class="row border-bottom border-3" >
+                <h1>Locales</h1>
+            </div>
+            <div class="row mt-3 text-center">
+                <div class="col-md m-2  card border-0 gap-2">
+                    <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.8717175905995!2d-79.83736038924275!3d-6.78546176633165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef33dda3be85%3A0x10d1e6ea25b85c0a!2sPuerto%20de%20Palos%20182%2C%20La%20Victoria%2014008!5e0!3m2!1ses-419!2spe!4v1756787755898!5m2!1ses-419!2spe" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h2 class="fw-normal card-title">La Victoria</h2>
+                    <button id="local-info-1" class="btn btn-primary btn-custom m-auto">Mostrar más</button>
                 </div>
-                <div class="col-md m-2  card border-0">
-                    <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle m-auto" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                    </svg>
-                    <h2 class="fw-normal card-title">Heading</h2>
-                    <p class="card-text">Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                </div>
-                <div class="col-md m-2 card border-0">
-                    <svg aria-label="Placeholder" class="bd-placeholder-img rounded-circle m-auto" height="140" preserveAspectRatio="xMidYMid slice" role="img" width="140" xmlns="http://www.w3.org/2000/svg">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-                    </svg>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
+                <div class="col-md m-2  card border-0 gap-2">
+                    <iframe class="m-auto" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d440.4604851549938!2d-79.81999321805348!3d-6.868133662199248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1756788272436!5m2!1ses-419!2spe" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h2 class="fw-normal card-title">Reque</h2>
+                    <button id="local-info-2" class="btn btn-primary btn-custom m-auto">Mostrar más</button>
                 </div>
             </div>
         </div>
@@ -99,6 +102,42 @@
                     </h2>
                     <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="container-md p-5 my-5 shadow border rounded coments-custom">
+            <h2 class="text-center fw-bold mb-5 text-black border-bottom border-2 border-black p-2">Lo que dicen nuestros clientes</h2>
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 p-4 card-rounded border-0 shadow-sm ">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/60x60/8e44ad/ffffff?text=LM" class="rounded-circle me-3" alt="Client 1">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Luis Martínez</h6>
+                                <small class="text-secondary">Aficionado a acuarios</small>
+                            </div>
+                        </div>
+                        <p class="text-secondary fst-italic">
+                            "Acuamont me ayudó a montar mi primer acuario con todo lo que necesitaba. Los peces están sanos y el equipo me dio excelentes consejos."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100 p-4 card-rounded border-0 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/60x60/3498db/ffffff?text=MC" class="rounded-circle me-3" alt="Client 2">
+                            <div>
+                                <h6 class="mb-0 fw-bold">María Campos</h6>
+                                <small class="text-secondary">Dueña de restaurante</small>
+                            </div>
+                        </div>
+                        <p class="text-secondary fst-italic">
+                            "Instalamos un acuario en nuestro restaurante y todos los clientes lo comentan. La calidad de los peces y accesorios es excelente."
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -143,5 +182,7 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/js-index.js"></script>
 </body>
 </html>

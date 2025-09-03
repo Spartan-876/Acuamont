@@ -29,7 +29,7 @@ document.getElementById('local-info-2').addEventListener('click', () => {
         title: 'Reque',
         html: `
                     <div class="text-start">
-                        <p><strong>Direccion:</strong>Prol. Leoncio Prado 98</p>
+                        <p><strong>Direccion:</strong> Prol. Leoncio Prado 98</p>
                         <p><strong>Descripción:</strong> Local dedicado a decoraciones, motores, medicamentos y accesorios para mantener tu acuario completo y saludable.</p>
                         <p><strong>Productos pincipales:</strong></p>
                         <ul>

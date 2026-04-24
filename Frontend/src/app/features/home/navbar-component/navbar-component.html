@@ -1,0 +1,58 @@
+<header class="w-full">
+    <div class="bg-[#061748] py-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-center gap-4 px-4">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tighter uppercase">
+                ACUA<span class="text-ocean-deep">MONT</span>
+            </h1>
+            <a routerLink="/inicio" class="transition-transform hover:scale-110">
+                <div>
+                    <img src="logo1.png" alt="Acuamont logo"
+                        class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+        <div class="container mx-auto">
+            <ul class="flex flex-wrap justify-center items-center gap-2 py-3 px-2">
+
+                <li>
+                    <a routerLink="/inicio" routerLinkActive="nav-active-link"
+                        class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition-all cursor-pointer">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/ver-servicios" routerLinkActive="nav-active-link"
+                        class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition-all cursor-pointer">
+                        Servicios
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/ver-productos" routerLinkActive="nav-active-link"
+                        class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition-all cursor-pointer">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/contacto" routerLinkActive="nav-active-link"
+                        class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition-all cursor-pointer">
+                        Contacto
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/Comentarios-web" routerLinkActive="nav-active-link"
+                        class="px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition-all cursor-pointer">
+                        Comentarios
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>

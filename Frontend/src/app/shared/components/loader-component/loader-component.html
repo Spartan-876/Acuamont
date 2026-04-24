@@ -1,0 +1,16 @@
+@if (loaderService.isLoading$ | async) {
+<div class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+    <div class="relative">
+        <div class="w-24 h-24 border-4 border-ocean-soft border-t-turquesa rounded-full animate-spin"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+            <i class="bi bi-water text-turquesa text-3xl"></i>
+        </div>
+    </div>
+
+    <h2 class="mt-6 text-2xl font-bold tracking-[0.3em] text-turquesa animate-pulse">
+        ACUAMONT
+    </h2>
+    <div class="mt-2 text-slate-400 text-sm italic">Sumergiéndote...</div>
+</div>
+}

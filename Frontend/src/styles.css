@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Outfit", sans-serif;
+
+    --color-aquamarine: #7fffd4;
+    --color-ocean-light: #e0f2f1;
+    --color-ocean-soft: #b2ebf2;
+    --color-ocean-deep: #00bcd4;
+    --color-turquesa: #53d1e2;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #8d8d8d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-active-link {
+    background-color: #2563eb !important;
+    color: white !important;
+}
+
+.nav-active-link:hover {
+    background-color: #1d4ed8 !important;
+    color: white !important;
+}

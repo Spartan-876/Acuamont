@@ -3,6 +3,7 @@ package com.example.acceso.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,12 +11,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "proveedor")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
+public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,21 +27,20 @@ public class Usuario {
     @Column(nullable = false, length = 100)
     private String nombre;
 
-    @NotBlank(message = "El usuario es obligatorio")
-    @Size(min = 3, max = 50, message = "El usuario debe tener entre 3 y 50 caracteres")
-    @Column(nullable = false, unique = true, length = 50)
-    private String usuario;
-
-    @Size(min = 6, message = "La clave debe tener al menos 6 caracteres")
+    @NotBlank(message = "El documento es obligatorio")
+    @Size(min = 11, max = 11, message = "El documento debe tener 11 dígitos")
     @Column(nullable = false)
-    private String clave;
+    private String documento;
 
-    @NotBlank(message = "El correo es obligatorio")
-    @Email(message = "El correo debe tener un formato válido")
-    @Column(nullable = false, unique = true)
+    @Pattern(regexp = "^$|\\d{9}", message = "El teléfono debe tener 9 dígitos si es ingresado")
+    @Column(length = 9)
+    private String telefono;
+
+    @Email(message = "El correo debe tener un formato válido")
+    @Column(unique = true)
     private String correo;
 
     @Column(nullable = false)
-    private Integer estado = 1; // 1: Activo, 0: Inactivo, 2: Eliminado
+    private Integer estado = 1;
 
 }

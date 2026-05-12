@@ -5,9 +5,17 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "proveedor")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Proveedor {
 
     @Id
@@ -35,61 +43,4 @@ public class Proveedor {
     @Column(nullable = false)
     private Integer estado = 1;
 
-    public Proveedor() {
-    }
-
-    public Proveedor(String nombre, String documento, String telefono, String correo) {
-        this.nombre = nombre;
-        this.documento = documento;
-        this.telefono = telefono;
-        this.correo = correo;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDocumento() {
-        return documento;
-    }
-
-    public void setDocumento(String documento) {
-        this.documento = documento;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
 }

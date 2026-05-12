@@ -3,9 +3,17 @@ package com.example.acceso.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "categorias")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Categoria {
 
     @Id
@@ -19,46 +27,5 @@ public class Categoria {
 
     @Column(nullable = false)
     private Integer estado = 1; // 1 activo, 0 inactivo , 2 eliminado
-
-    public Categoria() {
-    }
-
-    public Categoria(String nombre) {
-        this.nombre = nombre;
-        this.estado = 1;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
-
-    @Override
-    public String toString() {
-        return "categoria{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", estado=" + estado +
-                '}';
-    }
 
 }

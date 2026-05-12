@@ -4,9 +4,17 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "usuarios")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 
     @Id
@@ -35,84 +43,4 @@ public class Usuario {
     @Column(nullable = false)
     private Integer estado = 1; // 1: Activo, 0: Inactivo, 2: Eliminado
 
-    // Constructor por defecto
-    public Usuario() {
-    }
-
-    // Constructor con parámetros
-    public Usuario(String nombre, String usuario, String clave, String correo) {
-        this.nombre = nombre;
-        this.usuario = usuario;
-        this.clave = clave;
-        this.correo = correo;
-        this.estado = 1;
-    }
-
-    // Getters y Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", usuario='" + usuario + '\'' +
-                ", correo='" + correo + '\'' +
-                ", estado=" + estado +'\''+
-                ", perfil=" + perfil.getNombre() +
-                '}';
-    }
-
-    @ManyToOne
-    @JoinColumn(name="id_perfil")
-    private Perfil perfil;
-    public Perfil getPerfil() {
-        return perfil;
-    }
 }

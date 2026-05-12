@@ -1,12 +1,20 @@
 package com.example.acceso.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "pagos")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Pago {
 
     @Id
@@ -32,69 +40,4 @@ public class Pago {
     @Column(nullable = false)
     private Integer estado = 1; // 1 = Activo, 0 = Inactivo
 
-    public Pago() {}
-
-    public Pago(Cuota cuota, BigDecimal montoPagado, LocalDateTime fechaPago, String metodoPago, String comentario) {
-        this.cuota = cuota;
-        this.montoPagado = montoPagado;
-        this.fechaPago = fechaPago;
-        this.metodoPago = metodoPago;
-        this.comentario = comentario;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Cuota getCuota() {
-        return cuota;
-    }
-
-    public void setCuota(Cuota cuota) {
-        this.cuota = cuota;
-    }
-
-    public BigDecimal getMontoPagado() {
-        return montoPagado;
-    }
-
-    public void setMontoPagado(BigDecimal montoPagado) {
-        this.montoPagado = montoPagado;
-    }
-
-    public LocalDateTime getFechaPago() {
-        return fechaPago;
-    }
-
-    public void setFechaPago(LocalDateTime fechaPago) {
-        this.fechaPago = fechaPago;
-    }
-
-    public String getMetodoPago() {
-        return metodoPago;
-    }
-
-    public String getComentario() {
-        return comentario;
-    }
-
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
-    }
-
-    public void setMetodoPago(String metodoPago) {
-        this.metodoPago = metodoPago;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
 }

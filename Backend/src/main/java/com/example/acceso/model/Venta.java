@@ -3,6 +3,10 @@ package com.example.acceso.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,6 +15,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "ventas")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Venta {
 
     @Id
@@ -67,115 +75,4 @@ public class Venta {
     @Column(nullable = false)
     private Integer estado = 1; // 1 = Pagado, 0 = Pendiente, 2 = Eliminado
 
-    public Venta() {}
-
-    public Venta(SerieComprobante serieComprobante, Integer correlativo, Cliente cliente, Usuario usuario, LocalDateTime fecha, BigDecimal total, FormaPago formaPago, BigDecimal deuda, List<Cuota> cuotas, List<DetalleVenta> detalleVentas) {
-        this.serieComprobante = serieComprobante;
-        this.correlativo = correlativo;
-        this.cliente = cliente;
-        this.usuario = usuario;
-        this.fecha = fecha;
-        this.total = total;
-        this.formaPago = formaPago;
-        this.deuda = deuda;
-        this.cuotas = cuotas;
-        this.detalleVentas = detalleVentas;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public SerieComprobante getSerieComprobante() {
-        return serieComprobante;
-    }
-
-    public void setSerieComprobante(SerieComprobante serieComprobante) {
-        this.serieComprobante = serieComprobante;
-    }
-
-    public Integer getCorrelativo() {
-        return correlativo;
-    }
-
-    public void setCorrelativo(Integer correlativo) {
-        this.correlativo = correlativo;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-
-    public LocalDateTime getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDateTime fecha) {
-        this.fecha = fecha;
-    }
-
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    public void setTotal(BigDecimal total) {
-        this.total = total;
-    }
-
-    public FormaPago getFormaPago() {
-        return formaPago;
-    }
-
-    public void setFormaPago(FormaPago formaPago) {
-        this.formaPago = formaPago;
-    }
-
-    public BigDecimal getDeuda() {
-        return deuda;
-    }
-
-    public void setDeuda(BigDecimal deuda) {
-        this.deuda = deuda;
-    }
-
-    public List<Cuota> getCuotas() {
-        return cuotas;
-    }
-
-    public void setCuotas(List<Cuota> cuotas) {
-        this.cuotas = cuotas;
-    }
-
-    public List<DetalleVenta> getDetalleVentas() {
-        return detalleVentas;
-    }
-
-    public void setDetalleVentas(List<DetalleVenta> detalleVentas) {
-        this.detalleVentas = detalleVentas;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
 }

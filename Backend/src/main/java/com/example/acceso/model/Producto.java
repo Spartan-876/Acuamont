@@ -5,9 +5,17 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "productos")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Producto {
 
     @Id
@@ -53,115 +61,5 @@ public class Producto {
 
     @Column(nullable = false)
     private Integer estado = 1;
-
-    public Producto() {
-    }
-
-    public Producto(String nombre, String descripcion, Double precioCompra, Double precioVenta, Integer stock, Integer stockSeguridad, String imagen, Categoria categoria) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precioCompra = precioCompra;
-        this.precioVenta = precioVenta;
-        this.stock = stock;
-        this.stockSeguridad = stockSeguridad;
-        this.imagen = imagen;
-        this.categoria = categoria;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public Double getPrecioCompra() {
-        return precioCompra;
-    }
-
-    public void setPrecioCompra(Double precioCompra) {
-        this.precioCompra = precioCompra;
-    }
-
-    public Double getPrecioVenta() {
-        return precioVenta;
-    }
-
-    public void setPrecioVenta(Double precioVenta) {
-        this.precioVenta = precioVenta;
-    }
-
-    public Integer getStock() {
-        return stock;
-    }
-
-    public void setStock(Integer stock) {
-        this.stock = stock;
-    }
-
-    public Integer getStockSeguridad() {
-        return stockSeguridad;
-    }
-
-    public void setStockSeguridad(Integer stockSeguridad) {
-        this.stockSeguridad = stockSeguridad;
-    }
-
-    public String getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
-
-    @Override
-    public String toString() {
-        return "Producto{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", precioCompra=" + precioCompra +
-                ", precioVenta=" + precioVenta +
-                ", stock=" + stock +
-                ", stockSeguridad=" + stockSeguridad +
-                ", imagen='" + imagen + '\'' +
-                ", categoria=" + (categoria != null ? categoria.getNombre() : null) +
-                ", estado=" + estado +
-                '}';
-    }
 
 }

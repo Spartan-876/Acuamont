@@ -4,9 +4,17 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "series_comprobante")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SerieComprobante {
 
     @Id
@@ -30,52 +38,4 @@ public class SerieComprobante {
     @Column(nullable = false)
     private Integer estado = 1;
 
-    public SerieComprobante() {
-    }
-
-    public SerieComprobante(String nombre, String serie, Integer correlativo_actual) {
-        this.nombre = nombre;
-        this.serie = serie;
-        this.correlativo_actual = correlativo_actual;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getSerie() {
-        return serie;
-    }
-
-    public void setSerie(String serie) {
-        this.serie = serie;
-    }
-
-    public Integer getCorrelativo_actual() {
-        return correlativo_actual;
-    }
-
-    public void setCorrelativo_actual(Integer correlativo_actual) {
-        this.correlativo_actual = correlativo_actual;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
 }

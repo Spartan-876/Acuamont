@@ -1,9 +1,17 @@
 package com.example.acceso.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "tipo_movimiento")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class TipoMovimiento {
 
     @Id
@@ -17,29 +25,5 @@ public class TipoMovimiento {
     @Column(nullable = false)
     private Integer estado = 1;
 
-    public TipoMovimiento() {}
-
-    public TipoMovimiento(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public Integer getEstado() {
-        return estado;
-    }
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
 }
 

@@ -2,9 +2,17 @@ package com.example.acceso.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "forma_pago")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class FormaPago {
 
     @Id
@@ -18,34 +26,4 @@ public class FormaPago {
     @Column(nullable = false)
     private Integer estado = 1;
 
-    public FormaPago() {
-    }
-
-    public FormaPago(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Integer getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Integer estado) {
-        this.estado = estado;
-    }
 }

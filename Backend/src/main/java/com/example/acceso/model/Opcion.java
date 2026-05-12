@@ -6,9 +6,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "opciones")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Opcion {
 
     @Id
@@ -24,36 +32,4 @@ public class Opcion {
     @Column(length = 50)
     private String icono;
 
-    // Getters y Setters
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getRuta() {
-        return ruta;
-    }
-
-    public void setRuta(String ruta) {
-        this.ruta = ruta;
-    }
-
-    public String getIcono() {
-        return icono;
-    }
-
-    public void setIcono(String icono) {
-        this.icono = icono;
-    }
 }
